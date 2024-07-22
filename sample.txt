@@ -1,2 +1,0 @@
-sample text to test git
-and i edited this file
