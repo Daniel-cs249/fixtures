@@ -1,0 +1,82 @@
+  
+
+              html{
+                height: 100vh;
+                margin: 0;  
+                justify-content: center;
+              }
+                
+                body {
+                    background-image: url('login3.jpg');
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+                    margin: 0;
+                    height: 100vh;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+                
+                h1
+                {
+                text-align: center; 
+                }
+                .input-group {
+                display: flex;
+                align-items: center;
+                width: 80%;
+                margin-bottom: 10px;
+                }
+            
+                .input-group input[type="email"], 
+                .input-group input[type="password"] 
+                {
+                width: 70%;
+                padding: 10px;
+                border: 1px solid #0e0d0d;
+                border-radius: 5px;
+                box-sizing: border-box;
+                color: black;
+                background-color: rgba(212, 132, 212, 0.3);
+                }
+                button {
+                padding: 10px 20px;
+                border: none;
+                background-color: rgb(115, 65, 232);
+                cursor: pointer;
+                border-radius: 5px;
+                margin: 10px auto; /* Centering the submit button */
+                color: rgb(0, 0, 0);
+                transition: background-color 0.3s;
+                
+                font-weight: bolder;
+                }
+                
+            
+            .input-group label
+            {
+                width: 30%;
+                text-align: left;
+                margin-right: 10px;
+                color: rgb(0, 0, 0);
+                font-weight: bold;
+            }
+            input::placeholder
+            {
+                color: rgb(82, 29, 29);
+                opacity: 1;
+            }
+            fieldset
+                {
+                    min-width: 400px;
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 0 auto;
+                    border: 2px rgb(136, 52, 136);
+                    background-color: rgb(161, 139, 180,0.3);
+                    box-shadow: 0 4px 8px rgba(118, 5, 216, 0.2);
+                    border-radius: 50px; /* Add this line to make corners curved */
+                }
