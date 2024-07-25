@@ -3,5 +3,4 @@
 🌱 I’m currently learning ...front end
 💞️ I’m looking to collaborate on ...fixures
 📫 How to reach me ...mail@:daniel.cs249@gmail.com
-😄 Pronouns: ...
-⚡ Fun fact: ...
+
