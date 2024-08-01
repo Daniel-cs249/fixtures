@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="wscript.js"></script>
     <style>
         body {
             background-image: url('web1.jpeg');
@@ -10,26 +11,10 @@
             font-family: Arial, sans-serif; /* Default font for the body */
         }
 
-        .submit-button {
-            font-size: 20px;
-            width: 150px;
-            height: 50px; 
-            background-color: #4CAF50; 
-            color: white; 
-            border: none; 
-            border-radius: 5px; 
-            cursor: pointer; 
-            text-align: center; 
-            line-height: 50px; 
-            transition: background-color 0.3s;
-            position: absolute;
-            bottom: px; /* Ensure button is not overlapping other content */
-            right: 320px; /* Adjust as needed */
-        }
 
         label {
             font-family: cursive;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             color: #000;
         }
@@ -43,8 +28,8 @@
             width: 120px; /* Adjust width if needed */  
         }
 
-        input[type="text"], input[type="email"], input[type="password"], select {
-            font-family: 'Courier New', Courier, monospace; 
+        input[type="text"], select {
+            font-family:cursive; 
             font-size: 12px;
             font-weight: normal;
             font-style: italic;
@@ -55,19 +40,36 @@
             margin-bottom: 10px;
             box-sizing: border-box; /* Include padding and border in the width */
             border: 2px solid #4CAF50; /* Change border color */
-            box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Add shadow */
+            box-shadow: 0 0 10px rgba(134, 162, 135, 0.5); /* Add shadow */
         }
 
         fieldset {
-            width: 35%;
-            margin: 0 auto; 
-            border: 3px solid rgb(28, 174, 62); 
+            width: 30%;
+            box-shadow: #000;
+            border-radius: 20px ;
+            position:relative;
+            left: 20px;
+            border: 3px solid rgba(17, 19, 18, 0.3); 
             padding: 10px;
             background-color: rgba(255, 255, 255,0.5); 
         }
+        .submit-button {
+            font-size: 20px;
+            width: 125px;
+            height: 40px; 
+            background-color: #4CAF50; 
+            color: white; 
+            border-radius: 20px; 
+            cursor: pointer; 
+            transition: background-color 0.3s;
+            position: absolute;
+            left:450px;
+        }
 
         h2 {
-            text-align: center;
+            position:relative;
+            left:50px;
+            color: aliceblue;
         }   
     </style>
 </head>
@@ -76,8 +78,8 @@
         <h2>Enter the details</h2>
 
         <fieldset>  
-            <label for="name1">Player 1</label><br><br>
-            <input type="text" id="name1" name="player1" placeholder="name1"><br><br>
+            <label for="name1">Player 1</label><br>
+            <input type="text" id="name1" name="player1" placeholder="name1" autocomplete="off"><br>
             <label for="gender1">Gender</label>
             <select id="gender1" name="gender1">
                 <option>select</option>
@@ -89,8 +91,8 @@
         <br><br>
 
         <fieldset>
-            <label for="name2">Player 2</label><br><br>
-            <input type="text" id="name2" name="player2" placeholder="name"><br><br> 
+            <label for="name2">Player 2</label><br>
+            <input type="text" id="name2" name="player2" placeholder="name" autocomplete="off"><br>
             <label for="gender2">Gender</label>
             <select id="gender2" name="gender2">
                 <option>select</option>
@@ -102,17 +104,17 @@
         <br><br>
 
         <fieldset>
-            <p>Did you pay the entrance fees?</p>
+            <h4>Did you pay the entrance fees?</h4>
             <input type="checkbox" id="fee1" name="fee1">
             <label for="fee1">YES</label><br>
             <input type="checkbox" id="fee2" name="fee2">
             <label for="fee2">NO</label><br>
         </fieldset>
 
-        <br><br><br>
+        <br><br>
 
         <fieldset>
-            <p>Select the type of shuttle</p>
+            <h4>Select the type of shuttle</h4>
             <input type="radio" id="feather" name="cork">
             <label for="feather">Feather</label><br>
             <input type="radio" id="nylon" name="cork">
