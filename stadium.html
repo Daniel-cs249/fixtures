@@ -22,7 +22,7 @@
 fieldset {
     border: 1px solid #ccc;
     padding: 20px;
-    width: 300px; /* Adjust width as needed */
+    width: 270px; /* Adjust width as needed */
     box-sizing: border-box;
     text-align: center;
 }
@@ -30,11 +30,14 @@ fieldset {
 .image-description img {
     width: 100%;
     height: auto;
+    cursor: pointer;
 }
 
 .image-description p,h4 {
     margin-top: 5%;
     font-weight: bold;
+    color:rgb(168, 197, 21);
+
 }
 
     </style>
@@ -47,47 +50,61 @@ fieldset {
     <div class="container">
         <fieldset>
             <div class="image-description">
-                <img src="module3.jpeg" alt="Image 1">
+                <img src="module3.jpeg" onclick="court()" alt="Image 1">
                 <h4>Venba badminton court</h4>
                 <p>Anna nagar,Trichy</p>
             </div>
         </fieldset>
         <fieldset>
             <div class="image-description">
-                <img src="loginf.jpeg" alt="Image 2">
+                <img src="loginf.jpeg" onclick="court()" alt="Image 2">
                 <h4>ocean badminton court</h4>
                 <p>Puthur,Trichy</p>
             </div>
         </fieldset>
        <fieldset>
             <div class="image-description">
-                <img src="module1.jpeg" alt="Image 3">
+                <img src="module1.jpeg" onclick="court()" alt="Image 3">
                 <h4>Bay badminton court</h4>
                 <p>Srirangam,Trichy</p>
             </div>
         </fieldset>
         <fieldset>
             <div class="image-description">
-                <img src="module1.jpeg" alt="Image 3">
+                <img src="module5.jpeg" onclick="court()" alt="Image 3">
                 <h4>idestiny badminton court</h4>
                 <p>Manarpuram,Trichy</p>
             </div>
         </fieldset>
         <fieldset>
             <div class="image-description">
-                <img src="module4.jpeg" alt="Image 3">
+                <img src="module4.jpeg" onclick="court()" alt="Image 3">
                 <h4>rehobooth badminton court</h4>
                 <p>Vayalur,Trichy</p>
             </div>
         </fieldset>
         <fieldset>
             <div class="image-description">
-                <img src="module2.jpeg" alt="Image 3">
+                <img src="module6.jpeg" onclick="court()" alt="Image 3">
+                <h4>Chola badminton court</h4>
+                <p>Vayalur,Trichy</p>
+            </div>
+        </fieldset>
+        
+        <fieldset>
+            <div class="image-description">
+                <img src="module2.jpeg" onclick="court()" alt="Image 3">
                 <h4>drona badminton court</h4>
                 <p>E-puthur,Trichy</p>
             </div>
         </fieldset>
         <!-- Add more fieldsets as needed -->
     </div>
+    <script>
+        function court()
+        {
+            window.location.href=""
+        }
+    </script>
 </body>
 </html>
