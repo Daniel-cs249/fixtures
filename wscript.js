@@ -19,3 +19,8 @@ function login()
     }
     
 }
+
+function entry()
+{
+    window.localStorage.href=""
+}
