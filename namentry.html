@@ -6,6 +6,7 @@
                 body {
                     background-image: url('2.jpg');
                     background-size: cover;
+                    
                     height: 100vh;
                     margin: 0;
                     font-family: Arial, sans-serif; /* Default font for the body */
@@ -66,7 +67,73 @@
                     position: absolute;
                     left:450px;
                 }
+                .container 
+                {
+                    
+                    top:10%;
+                    right:10%;
+                    position:absolute;
+                    width: 50%;
+                    height: 50%;
+                    
+                }
+                .popup
+                {
+                    width: 80%;
+                    height: 80%;
+                    position:relative;
+                    align-items: right;
+                    top:10%;
+                    left:50%;
+                    
+                
+                }
+                .popup img
+                {
+                    width: 45%;
+                    height: 75%;
+                    position:relative;
+                    left:20%;
+                }
+                .popup h4{
+                    position: relative;
+                    left:23%;
+                    font-weight: 900;
+                    color: beige;
+                }
 
+                .btn {
+                    display: flex;
+                    flex-direction: column;
+                  
+                    }
+                .border
+                {
+                    border: 2px solid #000; /* Add border here */
+    box-sizing: border-box;
+                }
+                .btn button
+                {
+                    height: 40px;
+                    width: 70px;
+                    align-self: center;
+                    padding: 10px ;
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                }
+                .btn h4{
+                    
+                    font-weight: bolder;
+                    font-size: x-large;
+                   left:20%;
+                   color: green;
+                   
+                }
                 h2 {
                     position:relative;
                     left:50px;
@@ -77,7 +144,7 @@
                 function entry(event)
         {
             event.preventDefault();
-            window.location.href="http://127.0.0.1:5500/fixtures/stadium.html"
+            window.location.href=""
         }
             </script>
         </head>
@@ -113,10 +180,10 @@
 
                 <fieldset>
                     <h4>Did you pay the entrance fees?</h4>
-                    <input type="checkbox" id="fee1" name="fee1">
+                    <input type="checkbox" onclick="paid()" id="fee1" name="fee1">
                     <label for="fee1">YES</label><br>
-                    <input type="checkbox" id="fee2" name="fee2">
-                    <label for="fee2">NO</label><br>
+                    <input type="checkbox" onclick="notpaid()" id="fee2" name="fee2">
+                    <label for="fee2" >NO</label><br>
                 </fieldset>
 
                 <br><br>
@@ -130,7 +197,29 @@
                 </fieldset>
 
                 <input type="submit" value="Submit" class="submit-button">
+
             </form>
-            
+            <div class="container">
+                <div class="border">
+                <div class="popup">
+                    <h4>SCAN HERE.</h4>
+                    <img src="qr.jpeg">
+                    <div class="btn">
+                    <h4>UPI - Gpay,phonepe,paytym</h4>
+                    <button type="button">Done</button>
+                </div>
+                </div>
+                </div>
+            </div>
+            <script>
+                function notpaid()
+                {
+
+                }
+                function paid()
+                {
+
+                }
+            </script>
         </body>
         </html>
