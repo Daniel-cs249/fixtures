@@ -67,89 +67,54 @@
                     position: absolute;
                     left:450px;
                 }
-                .container 
+                .container
                 {
-                    
-                    top:10%;
-                    right:10%;
-                    position:absolute;
-                    width: 50%;
-                    height: 50%;
-                    
+                   top: 0%;
+                   right: 0%;
+                   position: absolute;
+                   width: 40%;
+                   height: 100vh;
+
+                   
                 }
                 .popup
                 {
-                    width: 80%;
-                    height: 80%;
-                    position:relative;
-                    align-items: right;
-                    top:10%;
-                    left:50%;
-                    
-                
+                    display: flex;
+                    width: 100%;
+                    height: 50vh;
+                    top:0%;
+                    align-items: center;
+                    flex-direction: column; 
+                    transform: translate(0%,-50%) scale(0.1);
+                    visibility: hidden;
+                    transition:transform 0.4s , top 0.4s;
+                }
+                .open-popup
+                {
+                    visibility: visible;
+                    transform: scale(1);
+                    top:0%;
+                }
+                .popup button{
+                    border-radius: 10px;
+                    background-color: #4CAF50;
                 }
                 .popup img
                 {
-                    width: 45%;
-                    height: 75%;
-                    position:relative;
-                    left:20%;
-                }
-                .popup h4{
-                    position: relative;
-                    left:23%;
-                    font-weight: 900;
-                    color: beige;
-                }
-
-                .btn {
-                    display: flex;
-                    flex-direction: column;
                   
-                    }
-                .border
-                {
-                    border: 2px solid #000; /* Add border here */
-    box-sizing: border-box;
+                    width: 40%;
+                    height: auto;
                 }
-                .btn button
-                {
-                    height: 40px;
-                    width: 70px;
-                    align-self: center;
-                    padding: 10px ;
-                    background-color: #4CAF50;
-                    color: white;
-                    border: none;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    transition: background-color 0.3s;
+                .popup h4,h3{
+                    color: #ccc;
+                }
 
-                }
-                .btn h4{
-                    
-                    font-weight: bolder;
-                    font-size: x-large;
-                   left:20%;
-                   color: green;
-                   
-                }
-                h2 {
-                    position:relative;
-                    left:50px;
-                    color: aliceblue;
-                }   
+
             </style>
-            <script>
-                function entry(event)
-        {
-            event.preventDefault();
-            window.location.href=""
-        }
-            </script>
+            
         </head>
         <body>
-            <form onsubmit="entry(event)">
+            <form onsubmit="handlesubmit(event)">
                 <h2>Enter the details</h2>
 
                 <fieldset>  
@@ -180,9 +145,9 @@
 
                 <fieldset>
                     <h4>Did you pay the entrance fees?</h4>
-                    <input type="checkbox" onclick="paid()" id="fee1" name="fee1">
+                    <input type="checkbox"  id="fee1" name="fee1">
                     <label for="fee1">YES</label><br>
-                    <input type="checkbox" onclick="notpaid()" id="fee2" name="fee2">
+                    <input type="checkbox" id="fee2" name="fee2">
                     <label for="fee2" >NO</label><br>
                 </fieldset>
 
@@ -200,25 +165,38 @@
 
             </form>
             <div class="container">
-                <div class="border">
-                <div class="popup">
-                    <h4>SCAN HERE.</h4>
+                <div class="popup" id="popup">
                     <img src="qr.jpeg">
-                    <div class="btn">
-                    <h4>UPI - Gpay,phonepe,paytym</h4>
-                    <button type="button">Done</button>
+                    <h4>Scan here</h4>
+                    <h3>Gpay,phonpe,paytm</h3>
+                    <button type="button" onclick="paid()">submit</button>
                 </div>
-                </div>
-                </div>
+
+            </div>
             </div>
             <script>
+                var popup=document.getElementById("popup")
+                function handlesubmit()
+                {
+                    event.preventDefault()
+                    var yes=document.getElementById("fee1").checked
+                    var no=document.getElementById("fee2").checked
+                    if(no)
+                    {
+                    notpaid()
+                    }
+                    else
+                    {
+                    window.location.href="http://127.0.0.1:5500/fixtures/stadium.html"
+                    }
+                }
                 function notpaid()
                 {
-
+                    popup.classList.add("open-popup")
                 }
                 function paid()
                 {
-
+                    popup.classList.remove("open-popup")
                 }
             </script>
         </body>
