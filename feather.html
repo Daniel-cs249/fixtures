@@ -9,13 +9,17 @@
     background-position: center;
     background-size: cover;
 }
+html, body {
+    height: 100%; /* Make sure both html and body take up the full viewport height */
+    margin: 0; /* Remove default margin */
+}
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Space between fieldsets */
-    justify-content:space-around; /* Adjust as needed */
-    padding: 20px;
+    gap: 50px; /* Space between fieldsets */
+    justify-content:center; /* Adjust as needed */
+    padding: 10px;
     
 }
 
@@ -50,41 +54,6 @@ fieldset {
     <div class="container">
         <fieldset>
             <div class="image-description">
-                <img src="module3.jpeg" onclick="court()" alt="Image 1">
-                <h4>Venba badminton court</h4>
-                <p>Anna nagar,Trichy</p>
-            </div>
-        </fieldset>
-        <fieldset>
-            <div class="image-description">
-                <img src="loginf.jpeg" onclick="court()" alt="Image 2">
-                <h4>ocean badminton court</h4>
-                <p>Puthur,Trichy</p>
-            </div>
-        </fieldset>
-       <fieldset>
-            <div class="image-description">
-                <img src="module1.jpeg" onclick="court()" alt="Image 3">
-                <h4>Bay badminton court</h4>
-                <p>Srirangam,Trichy</p>
-            </div>
-        </fieldset>
-        <fieldset>
-            <div class="image-description">
-                <img src="module5.jpeg" onclick="court()" alt="Image 3">
-                <h4>idestiny badminton court</h4>
-                <p>Manarpuram,Trichy</p>
-            </div>
-        </fieldset>
-        <fieldset>
-            <div class="image-description">
-                <img src="module4.jpeg" onclick="court()" alt="Image 3">
-                <h4>rehobooth badminton court</h4>
-                <p>Vayalur,Trichy</p>
-            </div>
-        </fieldset>
-        <fieldset>
-            <div class="image-description">
                 <img src="module6.jpeg" onclick="court()" alt="Image 3">
                 <h4>Chola badminton court</h4>
                 <p>Vayalur,Trichy</p>
@@ -98,7 +67,7 @@ fieldset {
                 <p>E-puthur,Trichy</p>
             </div>
         </fieldset>
-        <!-- Add more fieldsets as needed -->
+        
     </div>
     <script>
         function court()

@@ -182,14 +182,25 @@
                     event.preventDefault()
                     var yes=document.getElementById("fee1").checked
                     var no=document.getElementById("fee2").checked
+
                     if(no)
                     {
                     notpaid()
                     }
                     else
                     {
-                    window.location.href="http://127.0.0.1:5500/stadium.html"
+                    var nylon=document.getElementById("nylon").checked
+                    var feather=document.getElementById("feather").checked
+                    if(nylon)
+                    {
+                    window.location.href="http://127.0.0.1:5500/fixtures/nylon.html"
                     }
+                    if(feather)
+                    {
+                        window.location.href="http://127.0.0.1:5500/fixtures/feather.html"
+                    }
+                    }
+                    
                 }
                 function notpaid()
                 {
@@ -199,6 +210,7 @@
                 {
                     popup.classList.remove("open-popup")
                 }
+                
             </script>
         </body>
         </html>
